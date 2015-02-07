@@ -1,5 +1,5 @@
 //generate grid and put all things on it. display as the player moves around
-function Thing(name, locationX, locationY, canStep, false) { //things to put on grid
+function Thing(name, locationX, locationY, canStep) { //things to put on grid
 	this.name = name;
 	this.x = locationX;
 	this.y = locationY;
