@@ -6,7 +6,7 @@ function Thing(name, locationX, locationY, canStep) { //things to put on grid
 	this.canStep = canStep; //can player be at same location?
 	this.display = false; //does the thing appear on the grid?
 	this.img = new Image();
-	img.src = "images/" + this.name +".png";
+	this.img.src = "images/" + this.name +".png";
 	
 	//methods
 	this.destroy = function(){ //destroys thing/breaks it down so that player can step over it
@@ -14,7 +14,7 @@ function Thing(name, locationX, locationY, canStep) { //things to put on grid
 	}
 	this.display = function(){ //display on grid
 	this.appear = true;
-	
+
 	}
 }
 

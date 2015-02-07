@@ -2,7 +2,7 @@
 // Need to fix inventory status
 // Need to fix dialogue windows
 
-function Player(playerName, startingX, startingY) = {
+function Player(playerName, startingX, startingY) {
 	
 	this.actions =  new Actions();
 	this.name = playerName;
