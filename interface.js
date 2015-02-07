@@ -1,5 +1,5 @@
 
-
+var player = new Player();
 var size = 10;
 var grid = new Array(size);
 
