@@ -9,6 +9,7 @@ function Space(locationX, locationY) {
 		{
 			  = true; //this Space contains a Thing
 			 this.getThing = new Tree(locationX, locationY); //private variable for Tree
+			 this.hasThing = true;
 		}
 		else
 			this.hasThing = false;
