@@ -1,8 +1,8 @@
-function Player() = {
+function Player(playerName, startingX, startingY) = {
 	
 	this.actions =  new Actions();
 	this.name = playerName;
-	this.x = startingX; //placeholder
+	this.x = startingX;
 	this.y = startingY;
 	//this.charSprite = new Image();
 	this.health = 100;
