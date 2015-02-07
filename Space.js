@@ -6,12 +6,14 @@ function Space(locationX, locationY) {
 		var a = Math.floor(Math.random()*10 + 1); //generate a random number from 1 to 10
 		
 		if(a == 8) //10% chance of creating a tree
-		{	
-			 this.hasThing = true; //this Space contains a Thing
+		{
+			  = true; //this Space contains a Thing
 			 this.getThing = new Tree(locationX, locationY); //private variable for Tree
+			 this.hasThing = true;
 		}
 		else
 			this.hasThing = false;
-	}
-	
+	}	
 }
+
+

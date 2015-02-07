@@ -97,4 +97,4 @@ function Player(playerName, startingX, startingY) = {
 			*/
 	}
 			
-};`
+}
