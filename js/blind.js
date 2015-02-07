@@ -1,5 +1,5 @@
 matrix = [];
-biome = ["Empty" "Forest" "Lake" "Desert" "Mountain"];
+biome = ["Empty", "Forest", "Lake", "Desert", "Mountain"];
 blockDim = 60;
 var dim = 9;
 function unitSquare(x,y,b,o,v) {
