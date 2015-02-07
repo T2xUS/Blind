@@ -14,6 +14,7 @@ function Thing(name, locationX, locationY, canStep) { //things to put on grid
 	}
 	this.display = function(){ //display on grid
 	this.appear = true;
+	
 	}
 }
 

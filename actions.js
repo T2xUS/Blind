@@ -41,8 +41,12 @@ function moveDown() {
 }
 
 function checkMove(){
-    if(grid[player.x-1][player.y].hasThing) //if the Space has a Thing in it
-                if(grid[player.x-1][player.y].getThing.canStep) //if the player can step over the Thing
-                    return true;
-                return false;
-            }
+   var a = grid[player.x-1][player.y];
+    if(a.hasThing) //if the Space has a Thing in it
+    {
+        a.display();
+             if(a.getThing.canStep) //if the player can step over the Thing
+                return true;
+            return false;
+        }
+    }

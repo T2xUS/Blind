@@ -7,9 +7,14 @@ function Space(locationX, locationY) {
 		
 		if(a == 8) //10% chance of creating a tree
 		{
-			  = true; //this Space contains a Thing
-			 this.getThing = new Tree(locationX, locationY); //private variable for Tree
-			 this.hasThing = true;
+			 this.hasThing = true; //this Space contains a Thing
+			 this.getThing = new Tree(locationX, locationY); //create a tree
+			 
+		}
+		if(a == 9)
+		{
+			 this.hasThing = true; //this Space contains a Thing
+			 this.getThing = new Twig(locationX, locationY); //create a Twig
 		}
 		else
 			this.hasThing = false;

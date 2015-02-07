@@ -1,5 +1,5 @@
 
-var player = new Player();
+var player = new Player("Deer", 5,5);
 var size = 10;
 var grid = new Array(size);
 
