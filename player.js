@@ -20,6 +20,9 @@ function Player(playerName, startingX, startingY) = {
 		ill: false
 	}
 	this.inventory = [];
+	for(var i = 0; i < 31; i++) {
+		inventory[i] = 0;
+	}
 	this.dialog = {
 		inventory: {
 			x: ui.$window.width() - 50, //??
@@ -76,18 +79,22 @@ function Player(playerName, startingX, startingY) = {
 		}
 	}
 	
-	//Inventory Status (Incomplete)
-	this.inventoryStatus = function (itemType, itemQuantity, pickUp) {
+	//Inventory Update
+	this.inventoryUpdate = function (itemType, itemQuantity, pickUp) {'
+		
 		if (pickUp) {
-			for(var i  = 0; i < this.inventory[length]; i++) {
-				if (this.inventory[length] === undefined) {
-					this.inventory[length] = itemType;
+			inventory[itemType] += itemQuantity;
+		}
+		
+			/*
+			for(var i  = 0; i < this.inventory.length; i++) {
+				if (this.inventory[i] === undefined) {
+					this.inventory[i] = itemType;
+					break;
 				}
 				if (this.inventory[length] === itemType) {
 					this.inventory[length].quantity += itemQuantity;
-				}
-			}
-		}
+			*/
 	}
 			
 };`

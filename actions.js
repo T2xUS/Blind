@@ -1,9 +1,8 @@
-function Actions {
+function Actions() {
 	
-	this.addEventListener('keydown', movement);
+	//Movement
 	
 	function movement(key) {
-        key = key || window.event;
 		switch(key.keycode) {
 			case 37:
 			moveLeft();
@@ -15,20 +14,24 @@ function Actions {
 			moveDown();
 		}
 	}
-		
 	function moveLeft() {
-		player.x = player.x - 1;
+		if  (player.x !== 0) {
+			player.x = player.x - 1;
+		}
 	}
-
 	function moveRight() {
-		player.x = player.x + 1;
+		if  (player.x !== length - 1) {
+			player.x = player.x + 1;
+		}
 	}
-
 	function moveUp() {
-		player.x = player.y + 1;
+		if  (player.y !== 0) {
+			player.y = player.y + 1;
+		}
 	}
-
 	function moveDown() {
-		player.x = player.y - 1;
+		if  (player.y !== length - 1) {
+			player.y = player.y - 1;
+		}
 	}
 }
