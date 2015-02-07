@@ -80,7 +80,7 @@ function Player(playerName, startingX, startingY) {
 	}
 	
 	//Inventory Update
-	this.inventoryUpdate = function (itemType, itemQuantity, pickUp) {'
+	this.inventoryUpdate = function (itemType, itemQuantity, pickUp) {
 		
 		if (pickUp) {
 			inventory[itemType] += itemQuantity;

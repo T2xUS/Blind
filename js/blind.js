@@ -46,7 +46,7 @@ var fHeight = Math.min(dim*blockDim + "px"-hEdgeSpace,cHeight-hEdgeSpace);
 		matrix[row] = [];
 		for (var col = 0; col < 9; col++) {
 			matrix[row][col] = unitSquare(col,row,randomBiome(),false,0);
-			document.getElementById("game-area").appendChild(createBox(row,col,matrix[row][col]);
+			document.getElementById('game-area').appendChild(createBox(row,col,matrix[row][col]);
 		}
 	}
 		//TODO
