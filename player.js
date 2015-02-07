@@ -1,3 +1,7 @@
+// Need to fix player status
+// Need to fix inventory status
+// Need to fix dialogue windows
+
 function Player(playerName, startingX, startingY) = {
 	
 	this.actions =  new Actions();
@@ -40,7 +44,7 @@ function Player(playerName, startingX, startingY) = {
 		}
 	}
 	
-	//Player status
+	//Player status (I)
 	this.playerStatus = function() {
 		var showStatus = "";
 		if (this.status.bleeding) {
@@ -59,26 +63,31 @@ function Player(playerName, startingX, startingY) = {
 			showStatus += Messages.isNearDeath;
 		}
 		if (this.hunger >= 50 && this.hunger <= 90) {
-			showStatus += Messages.isHx
-			ungry;
+			showStatus += Messages.isHungry;
 		}
 		if (this.hunger >= 90) {
-			showStatus += Messages.starving;
+			showStatus += Messages.isStarving;
 		}
 		if (this.thirst >= 50) {
-			showStatus += Messages.thirsty;
+			showStatus += Messages.isThirsty;
 		}
 		if (!showStatus) {
-			showStatus += Messages.healthy;
+			showStatus += Messages.isHealthy;
 		}
 	}
 	
-	//Inventory Status
-	this.inventoryStatus = function (item, quantity, ignore)
-		var hasItem = false;
-		var itemCount = 0;
-		for(var i  = 0; i < this.inventory[length]; i++) {
-			if (this.inventory[length]))
+	//Inventory Status (Incomplete)
+	this.inventoryStatus = function (itemType, itemQuantity, pickUp) {
+		if (pickUp) {
+			for(var i  = 0; i < this.inventory[length]; i++) {
+				if (this.inventory[length] === undefined) {
+					this.inventory[length] = itemType;
+				}
+				if (this.inventory[length] === itemType) {
+					this.inventory[length].quantity += itemQuantity;
+				}
+			}
 		}
-	
+	}
+			
 };`
