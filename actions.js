@@ -20,23 +20,27 @@ function moveLeft() {
        if(checkMove) //Thing is not in way
           player.x = player.x - 1;
   }
+  console.log("left!");
 }
 function moveRight() {
     if  (player.x !== length - 1) {
        if(checkMove) 
         player.x = player.x + 1;
+    console.log("right!");
 }
 }
 function moveUp() {
     if  (player.y !== 0) {
        if(checkMove) 
           player.y = player.y + 1;
+      console.log("up!");
   }
 }
 function moveDown() {
     if  (player.y !== length - 1) {
        if(checkMove) 
            player.y = player.y - 1;
+       console.log("down!");
    }
 }
 
