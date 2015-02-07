@@ -1,62 +1,34 @@
-function actions {
+function Actions {
 	
+	this.addEventListener('keydown', movement);
 	
-	this.add
-	
-	function goUp() {
-		
+	function movement() {
+		switch(key.keycode) {
+			case 37:
+			moveLeft();
+			case 39:
+			moveRight();
+			case 38:
+			moveUp();
+			case 41:
+			moveDown();
+		}
 	}
-	
-	function goDown() {
 		
+	function moveLeft() {
+		player.x = player.x - 1;
 	}
-	
-	function goLeft() {
+
+	function moveRight() {
+		player.x = player.x + 1;
+	}
+
+	function moveUp() {
+		player.x = player.y + 1;
+	}
+
+	function moveDown() {
+		player.x = player.y - 1;
+	}
 		
-	}
-	
-	function goRight() {
-		
-	}
-	
-    function leftArrowPressed() {
-            var element = document.getElementById("image1");
-            element.style.left = parseInt(element.style.left) - 5 + 'px';
-            }
-
-            function rightArrowPressed() {
-            var element = document.getElementById("image1");
-            element.style.left = parseInt(element.style.left) + 5 + 'px';
-
-            }
-
-            function upArrowPressed() {
-            var element = document.getElementById("image1");
-            element.style.top = parseInt(element.style.top) - 5 + 'px';
-            }
-
-            function downArrowPressed() {
-            var element = document.getElementById("image1");
-            element.style.top = parseInt(element.style.top) + 5 + 'px';
-            }
-
-            function moveSelection() {
-                evt = evt || window.event; 
-                switch (evt.keyCode) {
-                    case 37:
-                    leftArrowPressed();
-                    break;
-                    case 39:
-                    rightArrowPressed();
-                    break;
-                    case 38:
-                    upArrowPressed();
-                    break;
-                    case 40:
-                    downArrowPressed();
-                    break;
-                    }
-                };
-        };
-        
 }
