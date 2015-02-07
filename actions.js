@@ -1,10 +1,8 @@
-function Actions {
+function Actions() {
 	
 	//Movement
-	window.addEventListener('keydown', movement);
 	
 	function movement(key) {
-        key = key || window.event;
 		switch(key.keycode) {
 			case 37:
 			moveLeft();
