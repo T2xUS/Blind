@@ -3,8 +3,8 @@ function Thing(name, locationX, locationY, canStep, false) { //things to put on 
 	this.name = name;
 	this.x = locationX;
 	this.y = locationY;
-	canStep = canStep; //can player be at same location?
-	appear = false; //does the thing appear on the grid?
+	this.canStep = canStep; //can player be at same location?
+	this.onGrid = false; //does the thing appear on the grid?
 	
 	//methods
 	this.destroy = function(){ //destroys thing/breaks it down so that player can step over it
