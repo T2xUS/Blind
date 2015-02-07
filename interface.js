@@ -18,7 +18,7 @@ s = document.getElementById('South'),
 e = document.getElementById('East'),
 w = document.getElementById('West');
 
-n.addEventListener('keydown', moveUp());
-s.addEventListener('keydown', moveDown());
-e.addEventListener('keydown', moveRight());
-w.addEventListener('keydown', moveLeft());
+n.addEventListener('click', moveUp());
+s.addEventListener('click', moveDown());
+e.addEventListener('click', moveRight());
+w.addEventListener('click', moveLeft());
