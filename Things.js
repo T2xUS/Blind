@@ -22,7 +22,7 @@ function Tree(locationX, locationY){ //can't step over trees. can destroy for wo
 	this.y = locationY;
 	canStep = false; 
 	this.img = new Image();
-	img.src = "tree.png"
+	img.src = "images/tree.png"
 }
 
 function Rock(locationX, locationY){ //the rock
@@ -31,7 +31,8 @@ function Rock(locationX, locationY){ //the rock
 	this.y = locationY;
 	canStep = false;
 	this.img = new Image();
-	img.src = "tree.png"
+	img.src = "images/rock.png"
 }
 
 Tree.prototype = new Thing();
+Rock.prototype = new Thing();
