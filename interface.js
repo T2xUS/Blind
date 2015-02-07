@@ -7,7 +7,7 @@ for(var i = 0; i < 9; i++)
 {
    for(var j = 0; j < 9; j++)
    {
-
+   	
    }
 }
 
@@ -18,5 +18,5 @@ w = document.getElementById('West');
 
 n.addEventListener('keydown', moveUp());
 s.addEventListener('keydown', moveDown());
-e.addEventListener('keydown', moveRight();
-w.addEventListener('keydown', moveLeft();
+e.addEventListener('keydown', moveRight());
+w.addEventListener('keydown', moveLeft());

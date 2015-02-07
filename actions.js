@@ -14,10 +14,6 @@ function Actions() { //arrow keys
 }
 }
 
-function Actions(dir)
-{
-
-}
 
 function moveLeft() {
   player.x = player.x - 1;
