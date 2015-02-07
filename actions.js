@@ -3,7 +3,8 @@ function Actions {
 	//Movement
 	window.addEventListener('keydown', movement);
 	
-	function movement() {
+	function movement(key) {
+        key = key || window.event;
 		switch(key.keycode) {
 			case 37:
 			moveLeft();
@@ -35,7 +36,4 @@ function Actions {
 			player.y = player.y - 1;
 		}
 	}
-	
-	//Other
-	
 }
