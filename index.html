@@ -15,7 +15,7 @@
         $("h1").click(function(){
           var name = prompt("/say My name is ?");
           $("h2").html("Hello there " + name + ". How may I help you today?");
-          var nothing = prompt ("Do you want help with nothing?");)
+          var nothing = prompt ("Do you want help with nothing?");
           if (nothing.toUpperCase() == "YES" || nothing.toUpperCase() == "Y") {
             $("h3").html("Awesome I will help you with nothing!");
           } else if (nothing.toUpperCase() == "NO" || nothing.toUpperCase() == "N") {
@@ -25,6 +25,7 @@
               $("h3").html("FINE!");
             } else if (nothing.toUpperCase() == "NO" || nothing.toUpperCase() == "N") {
               $("h3").html("Good I will help you with nothing!");
+			}
           } else {
           var business = prompt("Please state your business. /say ?");
           $("h3").html("Sorry I cannot and can not help you with " + business + ". Unfortunate. 404 Terminating!");
