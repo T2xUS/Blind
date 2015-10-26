@@ -10,7 +10,24 @@
     <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
       <script src="https://code.jquery.com/jquery-latest.min.js"></script>
     <script>
+    Object.defineProperty( Array.prototype,'has',
+         {
+            value:function(o,flag){
+                     if(flag === undefined){
+                         return this.indexOf(o) !== -1;
+                     }
+                     else{   // only for raw js object
+                         for(var v in this){
+                         if(JSON.stringify(this[v]) === JSON.stringify(o)) return true;
+                     }
+                      return false;                       
+                  },
+            // writable:false,
+            // enumerable:false
+         }
+   )
       $(document).ready(function(){
+        var agree = ["YES", "Y", "SURE", "(Y)"], disagree = ["NO", "N"];
         $("h1").click(function(){
           var name = prompt("/say My name is ?");
           $("h2").html("Hello there " + name + ". How may I help you today?");
@@ -20,7 +37,7 @@
           } else if (nothing.toUpperCase() == "NO" || nothing.toUpperCase() == "N") {
             $("h3").html("You don't want my help!");
             var sure = prompt ("Are you sure want help with nothing?");)
-            if (nothing.toUpperCase() == "YES" || nothing.toUpperCase() == "Y") {
+            if (agree.has(nothing.toUpperCase())) {
               $("h3").html("FINE!");
             } else if (nothing.toUpperCase() == "NO" || nothing.toUpperCase() == "N") {
               $("h3").html("Good I will help you with nothing!");
