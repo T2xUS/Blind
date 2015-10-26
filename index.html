@@ -10,7 +10,7 @@
     <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
       <script src="https://code.jquery.com/jquery-latest.min.js"></script>
     <script>
-    Object.defineProperty( Array.prototype,'has',
+Object.defineProperty( Array.prototype,'has',
          {
             value:function(o,flag){
                      if(flag === undefined){
@@ -21,9 +21,9 @@
                          if(JSON.stringify(this[v]) === JSON.stringify(o)) return true;
                      }
                       return false;                       
-                  }//,
-            // writable:false,
-            // enumerable:false
+                  },
+             writable:false,
+             enumerable:false
          }
    )
       $(document).ready(function(){
