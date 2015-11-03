@@ -1,0 +1,43 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script>
+
+    function searchTwitter() {
+      var searchterms = prompt("What do you want to search?");
+      $.getJSON("http://cooper-union-search-proxy.herokuapp.com/twitter/search/"+searchterms+"?count=100", function(response){
+        console.log("There are " + response.statuses.length + " tweets");
+        console.log(response);
+        var tokenList = [];
+        for(var i=0; i<response.statuses.length; i++) {
+          var strtok = response.statuses[i].text.split(" ");
+          for(var tok in strtok) {
+            tokenList.push(strtok[tok].toUpperCase());
+          }
+        }
+        console.log(tokenList);
+        var uniquetokenList = [];
+        for(var i = 0; i < tokenList.length; i++) {
+            if(uniquetokenList.indexOf(tokenList[i])==-1) {
+                uniquetokenList.push(tokenList[i]);
+            }
+        }
+        console.log(uniquetokenList);
+        for (var utok in uniquetokenList) {
+          var size = tokenList.reduce(function(total,x){return x==uniquetokenList[utok] ? total+1 : total}, 0);
+          console.log("Token:"+uniquetokenList[utok]+", size:"+size);
+          $("<div>"+uniquetokenList[utok]+"</div>").attr("id", uniquetokenList[utok]).css("font-size",size+"em").appendTo("body");
+          //$("body").append("<div id="+uniquetokenList[utok]+" style = \"font-size: "+size+"em\">"+uniquetokenList[utok]+"</div>");
+        }
+      });
+    }
+
+    </script>
+  </head>
+  <body style="display: flex; flex-wrap: wrap;">
+    <div id="info"><button type="info" onclick="searchTwitter()">Search!</button></div>
+
+  </body>
+</html>
