@@ -53,7 +53,7 @@
         for (var utok in uniquetokenList) {
           var size = tokenList.reduce(function(total,x){return x==uniquetokenList[utok] ? total+1 : total}, 0);
           console.log("Token:"+uniquetokenList[utok]+", size:"+size);
-          $("<div>"+uniquetokenList[utok]+"</div>").attr("id", uniquetokenList[utok]).css("font-size",size+"em","color",rainbow(curmax,size)).appendTo("body");
+          $("<div>"+uniquetokenList[utok]+"</div>").attr("id", uniquetokenList[utok]).css("font-size",size+"em").css("color",rainbow(curmax,size)).appendTo("body");
           //$("body").append("<div id="+uniquetokenList[utok]+" style = \"font-size: "+size+"em\">"+uniquetokenList[utok]+"</div>");
         }
       });
