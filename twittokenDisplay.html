@@ -27,7 +27,7 @@
         for (var utok in uniquetokenList) {
           var size = tokenList.reduce(function(total,x){return x==uniquetokenList[utok] ? total+1 : total}, 0);
           console.log("Token:"+uniquetokenList[utok]+", size:"+size);
-          $("<div>"+uniquetokenList[utok]+"</div>").attr("id", uniquetokenList[utok]).css("font-size",size+"em").appendTo("body");
+          $("<div>"+uniquetokenList[utok]+"</div>").attr("id", uniquetokenList[utok]).css("font-size",size+"em","color",Math.floor(Math.random()*16777215).toString(size)).appendTo("body");
           //$("body").append("<div id="+uniquetokenList[utok]+" style = \"font-size: "+size+"em\">"+uniquetokenList[utok]+"</div>");
         }
       });
