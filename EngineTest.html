@@ -8,6 +8,7 @@
   </head>
   <body>
     <div id="Alone" style="height: auto; min-width: auto"></div>
+    <div id="F" style="height: auto; min-width: auto"></div>
     <div id="F15" style="height: auto; min-width: auto"></div>
     <div id="B15" style="height: auto; min-width: auto"></div>
     <script type="text/javascript">
@@ -180,6 +181,38 @@
                 }
             },
             series: dataAlone
+        });
+        $('#F').highcharts({
+            chart: {
+                type: 'line'
+            },
+            title: {
+                text: 'Bit Rate through AWGN Channel'
+            },
+            subtitle: {
+                text: 'Matlab iterations: 1 frame, 10 iterations'
+            },
+            xAxis: {
+                categories: ["0","1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18","19","20"],
+                title: {
+                    text: 'SNR'
+                }
+              
+            },
+            yAxis: {
+                title: {
+                    text: 'Average Bit Rate'
+                }
+            },
+            plotOptions: {
+                line: {
+                    dataLabels: {
+                        enabled: false
+                    },
+                    enableMouseTracking: true
+                }
+            },
+            series: dataF
         });
         $('#F15').highcharts({
             chart: {
